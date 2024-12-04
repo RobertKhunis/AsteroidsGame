@@ -1,6 +1,7 @@
 //your variable declarations here
 Spaceship BrockPurdy;
 Star[] JakeMoody;
+ArrayList <Asteriod> NickBosa = new ArrayList <Asteriod>();
 public void setup() 
 {
   size(900, 600);
@@ -8,6 +9,9 @@ public void setup()
   JakeMoody = new Star[200];
   for(int i = 0; i < JakeMoody.length; i++){
   JakeMoody[i] = new Star();
+  }
+  for(int i = 0; i < 50; i++){
+  NickBosa.add(new Asteriod());
   }
 }
  
@@ -21,6 +25,13 @@ public void draw()
   for(int i = 0; i < JakeMoody.length; i++){
   JakeMoody[i].show();
   }
+  for(int i = 0; i < NickBosa.size(); i++){
+  NickBosa.get(i).show();
+  NickBosa.get(i).move();
+  if(dist((float)BrockPurdy.getCenterX(), (float)BrockPurdy.getCenterY(), (float)NickBosa.get(i).getCenterX(), (float)NickBosa.get(i).getCenterY())<20){
+  NickBosa.remove(i);
+  }
+  }
 }
 
 void keyPressed(){
@@ -28,7 +39,8 @@ void keyPressed(){
   BrockPurdy.hyperspace();
   }
   if (key == 'r'){
-  BrockPurdy.accelerate(Math.random()*.3);
+  BrockPurdy.accelerate(Math.random()*.15);
+    
   }
    if (key == 'd'){ 
      BrockPurdy.setCenterX(10);
@@ -49,4 +61,3 @@ void keyPressed(){
   BrockPurdy.turn(10);
   }
 }
-
