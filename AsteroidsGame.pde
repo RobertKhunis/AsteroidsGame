@@ -10,7 +10,7 @@ public void setup()
   for(int i = 0; i < JakeMoody.length; i++){
   JakeMoody[i] = new Star();
   }
-  for(int i = 0; i < 50; i++){
+  for(int i = 0; i < 60; i++){
   NickBosa.add(new Asteriod());
   }
 }
@@ -30,6 +30,7 @@ public void draw()
   NickBosa.get(i).move();
   if(dist((float)BrockPurdy.getCenterX(), (float)BrockPurdy.getCenterY(), (float)NickBosa.get(i).getCenterX(), (float)NickBosa.get(i).getCenterY())<20){
   NickBosa.remove(i);
+  i--;
   }
   }
 }
