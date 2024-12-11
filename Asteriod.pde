@@ -5,8 +5,8 @@ public Asteriod(double sz){
   corners = 8; 
   xCorners = new double[corners]; 
   yCorners = new double[corners]; 
-  xCorners[0] = -(double)2/10 * sz; 
-  yCorners[0] = -(double)11/10 * sz; 
+  xCorners[0] = (double)-2/10 * sz; 
+  yCorners[0] = (double)-11/10 * sz; 
   xCorners[1] = (double)2/10 * sz; 
   yCorners[1] = (double)-9/10 * sz; 
   xCorners[2] = (double)3/10 * sz; 
