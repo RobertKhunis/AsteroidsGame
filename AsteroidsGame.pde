@@ -2,7 +2,7 @@
 Spaceship BrockPurdy;
 Star[] JakeMoody;
 ArrayList <Asteriod> NickBosa = new ArrayList <Asteriod>();
-ArrayList <Bullet> TrentWilliams = new ArrayList<Bullet>();
+ArrayList <Bullet> TrentWilliams = new ArrayList <Bullet>();
 public void setup() 
 {
   size(900, 600);
